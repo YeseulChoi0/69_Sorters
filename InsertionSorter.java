@@ -5,12 +5,11 @@ import java.util.ArrayList;
 
 public class InsertionSorter extends Sorter {
 
-
     /**
       Construct an instance to process the user's data
      */
     public InsertionSorter(ArrayList<String> usersData){
-      elements = usersData;
+      super(usersData);
     }
 
     public void mySort(){
@@ -31,6 +30,7 @@ public class InsertionSorter extends Sorter {
           }
         }else{
           dropValue(indexToCompare + 1, valueToInsert);
+          return;
         }
       }
     }
